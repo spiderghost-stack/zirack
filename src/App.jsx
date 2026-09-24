@@ -50,7 +50,7 @@ const articles = [
         id: 'documents-professionnels', tag: 'Bureautique', image: '/assets/bureautique.jpeg',
         title: 'Les clés d’un document professionnel',
         intro: 'Un document bien présenté donne tout de suite plus de force à votre message.',
-        text: 'Chez ZIRACK-SERVICES, nous vous accompagnons dans la saisie, la mise en page et l’impression de vos CV, rapports, courriers et dossiers. Nous veillons à la lisibilité, à l’alignement et à la qualité du rendu final afin que chaque page soit claire et prête à être remise.',
+        text: 'Chez ZIRACK SERVICE, nous vous accompagnons dans la saisie, la mise en page et l’impression de vos CV, rapports, courriers et dossiers. Nous veillons à la lisibilité, à l’alignement et à la qualité du rendu final afin que chaque page soit claire et prête à être remise.',
     },
     {
         id: 'fils-accessoires', tag: 'Atelier', image: '/assets/mercerie.jpeg',
@@ -89,7 +89,7 @@ function App() {
                 <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-3.5 lg:px-8">
                     <a href="#accueil" onClick={closeMenu} className="flex shrink-0 items-center gap-2.5">
                         <span className="grid size-9 place-items-center rounded-lg bg-[#0b2b4b] text-xs font-black text-white">ZS</span>
-                        <span className="text-sm font-black tracking-[0.14em] text-[#0b2b4b] sm:text-base">ZIRACK<span className="text-[#5da8dc]">.</span></span>
+                        <span className="text-sm font-black tracking-[0.14em] text-[#0b2b4b] sm:text-base">ZIRACK <span className="text-[#5da8dc]">SERVICE</span></span>
                     </a>
                     <nav className={`${menuOpen ? 'flex' : 'hidden'} absolute left-4 right-4 top-[64px] flex-col gap-1 rounded-2xl border border-[#0b2b4b]/10 bg-white p-3 shadow-xl lg:static lg:flex lg:flex-row lg:items-center lg:gap-1 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none`} aria-label="Navigation principale">
                         {navLinks.map(([label, href]) => (
@@ -112,7 +112,7 @@ function App() {
                     <div className="absolute inset-0 bg-gradient-to-r from-[#0b2b4b] via-[#0b2b4b]/85 to-[#0b2b4b]/40" />
                     <div className="absolute -right-24 top-24 size-72 rounded-full bg-[#5da8dc]/20 blur-2xl" />
                     <div className="relative mx-auto max-w-7xl">
-                        <p className="animate-rise inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-wider text-[#a8d4ef]"><Sparkles size={14} /> ZIRACK Services</p>
+                        <p className="animate-rise inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-wider text-[#a8d4ef]"><Sparkles size={14} /> ZIRACK SERVICE</p>
                         <h1 className="animate-rise mt-6 max-w-2xl text-4xl font-black leading-[1.02] tracking-[-.03em] sm:text-6xl lg:text-[4.4rem]">
                             Le savoir-faire local, <span className="text-[#7fc0e8]">simplement.</span>
                         </h1>
@@ -166,9 +166,9 @@ function App() {
                             </div>
                         </div>
                         <div>
-                            <p className="text-xs font-black uppercase tracking-[.2em] text-[#7fc0e8]">Le savoir-faire derrière ZIRACK</p>
+                            <p className="text-xs font-black uppercase tracking-[.2em] text-[#7fc0e8]">Le savoir-faire derrière ZIRACK SERVICE</p>
                             <h2 className="mt-3 max-w-lg text-3xl font-black leading-tight tracking-[-.02em] sm:text-5xl">Une adresse pensée pour votre quotidien.</h2>
-                            <p className="mt-5 max-w-lg leading-7 text-white/65">ZIRACK-SERVICES rassemble plusieurs savoir-faire dans un même lieu, avec une attention particulière portée à la qualité, au conseil et à l’accueil.</p>
+                            <p className="mt-5 max-w-lg leading-7 text-white/65">ZIRACK SERVICE rassemble plusieurs savoir-faire dans un même lieu, avec une attention particulière portée à la qualité, au conseil et à l’accueil.</p>
                             <ul className="mt-7 grid gap-3">
                                 {['Qualité et soin dans chaque prestation', 'Conseil personnalisé à l’accueil', 'Commandes simples directement sur WhatsApp'].map((item) => (
                                     <li key={item} className="flex items-center gap-3 text-sm font-bold text-white/80">
@@ -236,7 +236,7 @@ function App() {
                         <div className="flex items-end justify-between gap-5">
                             <div>
                                 <p className="text-xs font-black uppercase tracking-[.2em] text-[#5da8dc]">Conseils & actualités</p>
-                                <h2 className="mt-3 text-3xl font-black tracking-[-.02em] text-[#0b2b4b] sm:text-4xl">Le journal ZIRACK</h2>
+                                <h2 className="mt-3 text-3xl font-black tracking-[-.02em] text-[#0b2b4b] sm:text-4xl">Le journal ZIRACK SERVICE</h2>
                             </div>
                             <a href={whatsappUrl} target="_blank" rel="noreferrer" className="hidden items-center gap-2 text-sm font-bold text-[#0b2b4b] sm:flex">Commander <ArrowRight size={16} /></a>
                         </div>
@@ -252,7 +252,7 @@ function App() {
                     <div>
                         <div className="flex items-center gap-2.5">
                             <span className="grid size-9 place-items-center rounded-lg bg-white text-xs font-black text-[#0b2b4b]">ZS</span>
-                            <span className="text-sm font-black tracking-[.14em]">ZIRACK.</span>
+                            <span className="text-sm font-black tracking-[.14em]">ZIRACK SERVICE</span>
                         </div>
                         <p className="mt-5 max-w-xs text-sm leading-6 text-white/60">Votre adresse de proximité à Akpro-Hanzounmé / Akpro-Missérété.</p>
                         <div className="mt-5 flex gap-2">
@@ -267,7 +267,7 @@ function App() {
                         <p className="text-sm leading-6 text-white/65">Ouvert tous les jours<br />08h00 — 20h00<br /><a href="tel:0197091251" className="text-white transition hover:text-[#7fc0e8]">01 97 09 12 51</a></p>
                     </div>
                 </div>
-                <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-xs text-white/35">© 2026 ZIRACK-SERVICES. Tous droits réservés.</div>
+                <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-xs text-white/35">© 2026 ZIRACK SERVICE. Tous droits réservés.</div>
             </footer>
         </div>
     )
@@ -301,7 +301,7 @@ function ArticleDetail({ article, onBack }) {
             <header className="fixed inset-x-0 top-0 z-50 bg-[#f4f8fc]/90 shadow-sm backdrop-blur-xl">
                 <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
                     <button type="button" onClick={onBack} className="inline-flex items-center gap-2 text-sm font-bold text-[#0b2b4b]"><ArrowLeft size={18} /> Retour aux services</button>
-                    <span className="text-sm font-black tracking-[.14em] text-[#0b2b4b]">ZIRACK<span className="text-[#5da8dc]">.</span></span>
+                    <span className="text-sm font-black tracking-[.14em] text-[#0b2b4b]">ZIRACK <span className="text-[#5da8dc]">SERVICE</span></span>
                 </div>
             </header>
             <main className="mx-auto grid max-w-7xl items-center gap-10 px-5 pb-20 pt-32 lg:grid-cols-2 lg:gap-20 lg:px-8 lg:pt-44">
