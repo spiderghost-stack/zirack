@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {
-    ArrowLeft, ArrowRight, ArrowUpRight, Check, Heart, MapPin, Menu,
+    ArrowLeft, ArrowRight, ArrowUpRight, Camera, Check, Heart, MapPin, Menu,
     MessageCircle, Phone, Printer, Scissors, Sparkles, Star, X,
 } from 'lucide-react'
 
@@ -71,25 +71,7 @@ const navLinks = [
     ['Bureautique', '#bureautique'],
     ['Mercerie', '#mercerie'],
     ['Saveurs locales', '#alimentaire'],
-    ['Tarifs', '#tarifs'],
     ['Contact', '#contact'],
-]
-
-const prices = [
-    ['Bureautique', [
-        ['Saisie & mise en page', 'à partir de 500 F / document'],
-        ['Impression noir & blanc', '50 F / page'],
-        ['Impression couleur', '100 F / page'],
-        ['Photocopie', '50 F / page'],
-    ]],
-    ['Mercerie & atelier', [
-        ['Surfilage', 'à partir de 500 F / pièce'],
-        ['Fils & accessoires', 'prix en boutique'],
-    ]],
-    ['Saveurs locales', [
-        ['Yaourt maison', 'à partir de 500 F'],
-        ['Jus naturel', 'à partir de 1 000 F'],
-    ]],
 ]
 
 function App() {
@@ -255,74 +237,6 @@ function App() {
                             <div>
                                 <p className="text-xs font-black uppercase tracking-[.2em] text-[#5da8dc]">Conseils & actualités</p>
                                 <h2 className="mt-3 text-3xl font-black tracking-[-.02em] text-[#0b2b4b] sm:text-4xl">Le journal ZIRACK SERVICE</h2>
-
-                    <section id="tarifs" className="scroll-mt-24 border-y border-[#0b2b4b]/10 bg-white px-5 py-16 lg:px-8 lg:py-24">
-                        <div className="mx-auto max-w-7xl">
-                            <p className="text-xs font-black uppercase tracking-[.2em] text-[#5da8dc]">Nos tarifs</p>
-                            <h2 className="mt-3 text-3xl font-black tracking-[-.02em] text-[#0b2b4b] sm:text-4xl">Des prix clairs, sans surprise.</h2>
-                            <p className="mt-4 max-w-xl leading-7 text-[#12283f]/60">Une indication pour préparer votre budget. Pour une commande précise, écrivez-nous sur WhatsApp : nous répondons avec le tarif exact.</p>
-                            <div className="mt-9 grid gap-5 md:grid-cols-3">
-                                {prices.map(([group, rows]) => (
-                                    <div key={group} className="rounded-3xl bg-[#f4f8fc] p-6 ring-1 ring-[#0b2b4b]/10">
-                                        <h3 className="text-lg font-black text-[#0b2b4b]">{group}</h3>
-                                        <ul className="mt-4 grid gap-3">
-                                            {rows.map(([label, price]) => (
-                                                <li key={label} className="flex items-baseline justify-between gap-3 border-b border-[#0b2b4b]/5 pb-3 text-sm last:border-0 last:pb-0">
-                                                    <span className="font-bold text-[#12283f]/75">{label}</span>
-                                                    <span className="shrink-0 font-black text-[#0b2b4b]">{price}</span>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="contact" className="scroll-mt-24 bg-[#0b2b4b] px-5 py-16 text-white lg:px-8 lg:py-24">
-                        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:gap-20">
-                            <div>
-                                <p className="text-xs font-black uppercase tracking-[.2em] text-[#7fc0e8]">Nous contacter</p>
-                                <h2 className="mt-3 text-3xl font-black leading-tight tracking-[-.02em] sm:text-4xl">Passez nous voir ou écrivez-nous.</h2>
-                                <p className="mt-5 max-w-lg leading-7 text-white/65">Nous sommes à Akpro-Hanzounmé, Akpro-Missérété. Appelez, écrivez sur WhatsApp ou venez directement : l’accueil est le même partout.</p>
-                                <div className="mt-8 grid gap-4">
-                                    <a href="tel:0197091251" className="flex items-center gap-4 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 transition hover:bg-white/10">
-                                        <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-[#5da8dc]/25 text-[#a8d4ef]"><Phone size={18} /></span>
-                                        <span>
-                                            <span className="block text-xs font-bold uppercase tracking-wider text-white/45">Téléphone</span>
-                                            <span className="block text-base font-black">01 97 09 12 51</span>
-                                        </span>
-                                    </a>
-                                    <a href={whatsappUrl} target="_blank" rel="noreferrer" className="flex items-center gap-4 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10 transition hover:bg-white/10">
-                                        <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-[#5da8dc]/25 text-[#a8d4ef]"><MessageCircle size={18} /></span>
-                                        <span>
-                                            <span className="block text-xs font-bold uppercase tracking-wider text-white/45">WhatsApp</span>
-                                            <span className="block text-base font-black">Commander en un message</span>
-                                        </span>
-                                    </a>
-                                    <div className="flex items-center gap-4 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                                        <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-[#5da8dc]/25 text-[#a8d4ef]"><MapPin size={18} /></span>
-                                        <span>
-                                            <span className="block text-xs font-bold uppercase tracking-wider text-white/45">Adresse</span>
-                                            <span className="block text-base font-black">Akpro-Hanzounmé, Akpro-Missérété</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10 sm:p-8">
-                                <h3 className="text-lg font-black">Horaires d’ouverture</h3>
-                                <ul className="mt-5 grid gap-3 text-sm">
-                                    {[['Lundi — Vendredi', '08h00 — 20h00'], ['Samedi', '08h00 — 20h00'], ['Dimanche', '08h00 — 20h00']].map(([day, hours]) => (
-                                        <li key={day} className="flex items-center justify-between gap-3 border-b border-white/10 pb-3 last:border-0 last:pb-0">
-                                            <span className="font-bold text-white/70">{day}</span>
-                                            <span className="font-black text-[#a8d4ef]">{hours}</span>
-                                        </li>
-                                    ))}
-                                </ul>
-                                <a href={whatsappUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-black text-[#0b2b4b] transition hover:-translate-y-1 hover:bg-[#a8d4ef]">Commander sur WhatsApp <ArrowUpRight size={16} /></a>
-                            </div>
-                        </div>
-                    </section>
                             </div>
                             <a href={whatsappUrl} target="_blank" rel="noreferrer" className="hidden items-center gap-2 text-sm font-bold text-[#0b2b4b] sm:flex">Commander <ArrowRight size={16} /></a>
                         </div>
@@ -333,7 +247,7 @@ function App() {
                 </section>
             </main>
 
-            <footer className="bg-[#0b2b4b] px-5 py-14 text-white lg:px-8">
+            <footer id="contact" className="scroll-mt-24 bg-[#0b2b4b] px-5 py-14 text-white lg:px-8">
                 <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
                     <div>
                         <div className="flex items-center gap-2.5">
@@ -343,6 +257,7 @@ function App() {
                         <p className="mt-5 max-w-xs text-sm leading-6 text-white/60">Votre adresse de proximité à Akpro-Hanzounmé / Akpro-Missérété.</p>
                         <div className="mt-5 flex gap-2">
                             <a href={whatsappUrl} aria-label="WhatsApp" className="rounded-full bg-white/10 p-2 transition hover:bg-[#5da8dc]"><MessageCircle size={15} /></a>
+                            <a href="#contact" aria-label="Réseaux sociaux" className="rounded-full bg-white/10 p-2 transition hover:bg-[#5da8dc]"><Camera size={15} /></a>
                         </div>
                     </div>
                     <FooterColumn title="Navigation" links={['Accueil', 'Bureautique', 'Mercerie', 'Saveurs locales']} />
