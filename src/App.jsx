@@ -10,7 +10,7 @@ const categories = [
     ['Bureautique', 'Documents prêts', '/assets/bureautique.jpeg', '#bureautique'],
     ['Mercerie', 'Fils & accessoires', '/assets/mercerie.jpeg', '#mercerie'],
     ['Surfilage', 'Finitions nettes', '/assets/mercerie.jpeg', '#mercerie'],
-    ['Yaourts', 'Fait maison', '/assets/yaourt.jpeg', '#alimentaire'],
+    ['Yaourts', 'Frais & savoureux', '/assets/yaourt.jpeg', '#alimentaire'],
     ['Jus naturels', 'Frais du jour', '/assets/jus.jpg', '#alimentaire'],
     ['Commandes', 'Sur WhatsApp', '/assets/yaourt.jpg', '#contact'],
 ]
@@ -32,10 +32,10 @@ const services = [
     },
     {
         id: 'alimentaire', number: '03', label: 'Saveurs locales',
-        title: 'Le fait maison qui se partage.',
-        text: 'Yaourts onctueux et jus naturels préparés avec soin, disponibles sur commande à Akpro-Missérété.',
-        image: '/assets/yaourt.jpeg', alt: 'Yaourt fait maison avec des fruits',
-        items: ['Préparé chaque semaine', 'Recettes locales sans additifs', 'Commande à l’avance'],
+        title: 'Des saveurs qui se partagent.',
+        text: 'Yaourts onctueux et jus naturels, disponibles sur commande à Akpro-Missérété.',
+        image: '/assets/yaourt.jpeg', alt: 'Yaourt aux fruits',
+        items: ['Yaourts onctueux', 'Jus naturels', 'Disponibles sur commande'],
     },
 ]
 
@@ -50,7 +50,7 @@ const articles = [
         id: 'documents-professionnels', tag: 'Bureautique', image: '/assets/bureautique.jpeg',
         title: 'Les clés d’un document professionnel',
         intro: 'Un document bien présenté donne tout de suite plus de force à votre message.',
-        text: 'Chez ZIRACK SERVICE, nous vous accompagnons dans la saisie, la mise en page et l’impression de vos CV, rapports, courriers et dossiers. Nous veillons à la lisibilité, à l’alignement et à la qualité du rendu final afin que chaque page soit claire et prête à être remise.',
+        text: 'Chez ZIRACK SERVICES, nous vous accompagnons dans la saisie, la mise en page et l’impression de vos CV, rapports, courriers et dossiers. Nous veillons à la lisibilité, à l’alignement et à la qualité du rendu final afin que chaque page soit claire et prête à être remise.',
     },
     {
         id: 'fils-accessoires', tag: 'Atelier', image: '/assets/mercerie.jpeg',
@@ -59,10 +59,10 @@ const articles = [
         text: 'Notre espace mercerie propose les essentiels pour vos travaux de couture : fils résistants, boutons et accessoires sélectionnés pour vos projets. Nous pouvons aussi vous orienter selon le tissu, la couleur et la finition recherchée, pour vous aider à repartir avec une solution adaptée.',
     },
     {
-        id: 'fait-maison', tag: 'Saveurs', image: '/assets/yaourt.jpeg',
-        title: 'Pourquoi choisir le fait maison ?',
-        intro: 'Des recettes préparées avec attention, pour retrouver le goût simple des bons produits.',
-        text: 'Nos yaourts et jus naturels sont préparés avec soin et proposés sur commande. Cette organisation nous permet de privilégier la fraîcheur et de préparer les quantités dont vous avez réellement besoin. Commandez à l’avance et récupérez vos produits à Akpro-Missérété.',
+        id: 'saveurs-locales', tag: 'Saveurs', image: '/assets/yaourt.jpeg',
+        title: 'Yaourts et jus : des saveurs à découvrir',
+        intro: 'Des yaourts et jus à savourer au quotidien, disponibles sur commande.',
+        text: 'Nos yaourts et nos jus naturels sont disponibles sur commande. Nous privilégions la fraîcheur et adaptons les quantités à vos besoins. Commandez à l’avance et récupérez vos produits à Akpro-Missérété.',
     },
 ]
 
@@ -89,7 +89,7 @@ function App() {
                 <div className="mx-auto flex max-w-7xl items-center justify-between gap-5 px-5 py-3.5 lg:px-8">
                     <a href="#accueil" onClick={closeMenu} className="flex shrink-0 items-center gap-2.5">
                         <span className="grid size-9 place-items-center rounded-lg bg-[#0b2b4b] text-xs font-black text-white">ZS</span>
-                        <span className="text-sm font-black tracking-[0.14em] text-[#0b2b4b] sm:text-base">ZIRACK <span className="text-[#5da8dc]">SERVICE</span></span>
+                        <span className="text-sm font-black tracking-[0.14em] text-[#0b2b4b] sm:text-base">ZIRACK <span className="text-[#5da8dc]">SERVICES</span></span>
                     </a>
                     <nav className={`${menuOpen ? 'flex' : 'hidden'} absolute left-4 right-4 top-[64px] flex-col gap-1 rounded-2xl border border-[#0b2b4b]/10 bg-white p-3 shadow-xl lg:static lg:flex lg:flex-row lg:items-center lg:gap-1 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none`} aria-label="Navigation principale">
                         {navLinks.map(([label, href]) => (
@@ -108,16 +108,16 @@ function App() {
 
             <main>
                 <section id="accueil" className="relative overflow-hidden bg-[#0b2b4b] px-5 pb-16 pt-32 text-white lg:px-8 lg:pb-24 lg:pt-44">
-                    <img src="/assets/jus.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-30" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#0b2b4b] via-[#0b2b4b]/85 to-[#0b2b4b]/40" />
+                    <img src="/assets/hero.jpeg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-50" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#0b2b4b]/75 via-[#0b2b4b]/60 to-[#0b2b4b]/35" />
                     <div className="absolute -right-24 top-24 size-72 rounded-full bg-[#5da8dc]/20 blur-2xl" />
                     <div className="relative mx-auto max-w-7xl">
-                        <p className="animate-rise inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-wider text-[#a8d4ef]"><Sparkles size={14} /> ZIRACK SERVICE</p>
+                        <p className="animate-rise inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-wider text-[#a8d4ef]"><Sparkles size={14} /> ZIRACK SERVICES</p>
                         <h1 className="animate-rise mt-6 max-w-2xl text-4xl font-black leading-[1.02] tracking-[-.03em] sm:text-6xl lg:text-[4.4rem]">
                             Le savoir-faire local, <span className="text-[#7fc0e8]">simplement.</span>
                         </h1>
                         <p className="animate-rise-delay mt-6 max-w-xl text-base leading-7 text-white/70">
-                            Bureautique, mercerie et saveurs maison : une adresse de proximité à Akpro-Missérété pour vos besoins du quotidien et vos belles idées.
+                            Bureautique, mercerie et saveurs locales : une adresse de proximité à Akpro-Missérété pour vos besoins du quotidien et vos belles idées.
                         </p>
                         <div className="animate-rise-delay mt-9 flex flex-wrap gap-3">
                             <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-black text-[#0b2b4b] shadow-lg transition hover:-translate-y-1 hover:bg-[#a8d4ef]">Commander sur WhatsApp <ArrowUpRight size={17} /></a>
@@ -126,7 +126,7 @@ function App() {
                         <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-white/15 pt-6 text-xs font-black uppercase tracking-wider text-white/50">
                             <span className="flex items-center gap-2"><Printer size={15} /> Bureautique</span>
                             <span className="flex items-center gap-2"><Scissors size={15} /> Mercerie & Atelier</span>
-                            <span className="flex items-center gap-2"><Heart size={15} /> Saveurs maison</span>
+                            <span className="flex items-center gap-2"><Heart size={15} /> Saveurs locales</span>
                             <span className="flex items-center gap-2"><MapPin size={15} /> Akpro-Missérété</span>
                         </div>
                     </div>
@@ -159,16 +159,16 @@ function App() {
                     <div className="absolute -left-20 bottom-0 size-80 rounded-full bg-[#5da8dc]/15 blur-3xl" />
                     <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2 lg:gap-20">
                         <div className="grid grid-cols-2 gap-3">
-                            <img src="/assets/mercerie.jpeg" alt="Mercerie ZIRACK" className="h-64 w-full rounded-3xl object-cover sm:h-80" />
+                            <img src="/assets/mercerie.jpeg" alt="Mercerie ZIRACK SERVICES" className="h-64 w-full rounded-3xl object-cover sm:h-80" />
                             <div className="mt-8 grid gap-3">
-                                <img src="/assets/yaourt.jpeg" alt="Yaourt maison" className="h-36 w-full rounded-3xl object-cover sm:h-44" />
+                                <img src="/assets/yaourt.jpeg" alt="Yaourt aux fruits" className="h-36 w-full rounded-3xl object-cover sm:h-44" />
                                 <img src="/assets/bureautique.jpeg" alt="Service bureautique" className="h-36 w-full rounded-3xl object-cover sm:h-44" />
                             </div>
                         </div>
                         <div>
-                            <p className="text-xs font-black uppercase tracking-[.2em] text-[#7fc0e8]">Le savoir-faire derrière ZIRACK SERVICE</p>
+                            <p className="text-xs font-black uppercase tracking-[.2em] text-[#7fc0e8]">Le savoir-faire derrière ZIRACK SERVICES</p>
                             <h2 className="mt-3 max-w-lg text-3xl font-black leading-tight tracking-[-.02em] sm:text-5xl">Une adresse pensée pour votre quotidien.</h2>
-                            <p className="mt-5 max-w-lg leading-7 text-white/65">ZIRACK SERVICE rassemble plusieurs savoir-faire dans un même lieu, avec une attention particulière portée à la qualité, au conseil et à l’accueil.</p>
+                            <p className="mt-5 max-w-lg leading-7 text-white/65">ZIRACK SERVICES rassemble plusieurs savoir-faire dans un même lieu, avec une attention particulière portée à la qualité, au conseil et à l’accueil.</p>
                             <ul className="mt-7 grid gap-3">
                                 {['Qualité et soin dans chaque prestation', 'Conseil personnalisé à l’accueil', 'Commandes simples directement sur WhatsApp'].map((item) => (
                                     <li key={item} className="flex items-center gap-3 text-sm font-bold text-white/80">
@@ -184,8 +184,8 @@ function App() {
                 <section className="border-b border-[#0b2b4b]/10 bg-white px-5 py-10 lg:px-8">
                     <div className="mx-auto grid max-w-7xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
                         <Stat value="3" label="univers de services" />
-                        <Stat value="100%" label="local & fait maison" />
-                        <Stat value="08-20" label="ouvert tous les jours" />
+                        <Stat value="100%" label="produits locaux" />
+                        <Stat value="08H-20H" label="ouvert tous les jours" />
                         <Stat value="WhatsApp" label="commande en un message" />
                     </div>
                 </section>
@@ -197,7 +197,7 @@ function App() {
                         <div className="mt-8 grid grid-cols-3 gap-5 sm:grid-cols-6 sm:gap-7">
                             {categories.map(([name, detail, image, href]) => (
                                 <a key={name} href={href} className="group text-center">
-                                    <div className="mx-auto aspect-square max-w-[110px] overflow-hidden rounded-full border-2 border-[#dcebf5] p-1 transition group-hover:-translate-y-1 group-hover:border-[#5da8dc]">
+                                    <div className="mx-auto aspect-square max-w-[110px] overflow-hidden rounded-full border border-[#dcebf5] p-1 transition group-hover:-translate-y-1 group-hover:border-[#5da8dc]">
                                         <img src={image} alt={name} className="h-full w-full rounded-full object-cover" />
                                     </div>
                                     <p className="mt-3 text-sm font-black text-[#0b2b4b]">{name}</p>
@@ -236,7 +236,7 @@ function App() {
                         <div className="flex items-end justify-between gap-5">
                             <div>
                                 <p className="text-xs font-black uppercase tracking-[.2em] text-[#5da8dc]">Conseils & actualités</p>
-                                <h2 className="mt-3 text-3xl font-black tracking-[-.02em] text-[#0b2b4b] sm:text-4xl">Le journal ZIRACK SERVICE</h2>
+                                <h2 className="mt-3 text-3xl font-black tracking-[-.02em] text-[#0b2b4b] sm:text-4xl">Le journal ZIRACK SERVICES</h2>
                             </div>
                             <a href={whatsappUrl} target="_blank" rel="noreferrer" className="hidden items-center gap-2 text-sm font-bold text-[#0b2b4b] sm:flex">Commander <ArrowRight size={16} /></a>
                         </div>
@@ -252,7 +252,7 @@ function App() {
                     <div>
                         <div className="flex items-center gap-2.5">
                             <span className="grid size-9 place-items-center rounded-lg bg-white text-xs font-black text-[#0b2b4b]">ZS</span>
-                            <span className="text-sm font-black tracking-[.14em]">ZIRACK SERVICE</span>
+                            <span className="text-sm font-black tracking-[.14em]">ZIRACK SERVICES</span>
                         </div>
                         <p className="mt-5 max-w-xs text-sm leading-6 text-white/60">Votre adresse de proximité à Akpro-Hanzounmé / Akpro-Missérété.</p>
                         <div className="mt-5 flex gap-2">
@@ -261,13 +261,13 @@ function App() {
                         </div>
                     </div>
                     <FooterColumn title="Navigation" links={['Accueil', 'Bureautique', 'Mercerie', 'Saveurs locales']} />
-                    <FooterColumn title="Services" links={['Saisie & impression', 'Surfilage', 'Yaourts maison', 'Jus naturels']} />
+                    <FooterColumn title="Services" links={['Saisie & impression', 'Surfilage', 'Yaourts', 'Jus naturels']} />
                     <div>
                         <h3 className="mb-4 text-xs font-black uppercase tracking-wider text-[#7fc0e8]">Nous trouver</h3>
                         <p className="text-sm leading-6 text-white/65">Ouvert tous les jours<br />08h00 — 20h00<br /><a href="tel:0197091251" className="text-white transition hover:text-[#7fc0e8]">01 97 09 12 51</a></p>
                     </div>
                 </div>
-                <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-xs text-white/35">© 2026 ZIRACK SERVICE. Tous droits réservés.</div>
+                <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-xs text-white/35">© 2026 ZIRACK SERVICES. Tous droits réservés.</div>
             </footer>
         </div>
     )
@@ -301,7 +301,7 @@ function ArticleDetail({ article, onBack }) {
             <header className="fixed inset-x-0 top-0 z-50 bg-[#f4f8fc]/90 shadow-sm backdrop-blur-xl">
                 <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
                     <button type="button" onClick={onBack} className="inline-flex items-center gap-2 text-sm font-bold text-[#0b2b4b]"><ArrowLeft size={18} /> Retour aux services</button>
-                    <span className="text-sm font-black tracking-[.14em] text-[#0b2b4b]">ZIRACK <span className="text-[#5da8dc]">SERVICE</span></span>
+                    <span className="text-sm font-black tracking-[.14em] text-[#0b2b4b]">ZIRACK <span className="text-[#5da8dc]">SERVICES</span></span>
                 </div>
             </header>
             <main className="mx-auto grid max-w-7xl items-center gap-10 px-5 pb-20 pt-32 lg:grid-cols-2 lg:gap-20 lg:px-8 lg:pt-44">
